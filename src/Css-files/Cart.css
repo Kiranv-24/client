@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900&display=swap");
+
+body, h1, h2, h3, h4, h5, h6, p {
+    z-index: 1000;
+}
+
+.Cart-section {
+    margin-top: 40px;
+    padding: 0 40px;
+}
+
+.row-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.row-section:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.hd {
+    padding: 20px 0;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.Table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.Table tr {
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (min-width: 1469px) {
+    .Table tr {
+        width: 939px !important; /* Ensure table does not exceed 939px */
+    }
+}
+
+.Table td {
+    padding: 20px;
+    vertical-align: middle;
+}
+
+.CartimgWrapper {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.CartimgWrapper .imgWrapper {
+    width: 100px; /* Adjusted width for better responsiveness */
+    height: 100px; /* Adjusted height for better responsiveness */
+    background-color: white !important;
+    margin-right: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.CartimgWrapper img {
+    width: 100%; /* Make the image take full width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.CartimgWrapper .imgWrapper:hover {
+    transform: scale(1.05);
+}
+
+.Description {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: calc(100% - 140px);
+    margin-left: 20px;
+}
+
+.Description h4 {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 5px;
+    white-space: normal;
+  
+}
+
+.Description p {
+    color: #777;
+    font-size: 1rem;
+}
+
+.quantity-column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantity-column input {
+    width: 60px;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 0 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.quantity-column input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.price-column {
+    font-weight: 700;
+    text-align: right;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.summary-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px;
+    margin-left: 20px;
+    transition: transform 0.3s ease;
+}
+
+.summary-section:hover {
+    transform: translateY(-2px);
+}
+
+.summary-section h4 {
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.summary-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.checkout-btn {
+    background-color: #f0c14b;
+    color: #111;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    width: 100%;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.checkout-btn:hover {
+    background-color: #ddb347;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.remove-btn {
+    color: black;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.remove-btn:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+.remove-all-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.back-button {
+    background-color: #007bff; /* Primary color for the button */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    padding: 10px 15px; /* Padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-weight: 600; /* Font weight */
+    font-size: 1rem; /* Font size */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition for hover effect */
+    margin-bottom: 20px; /* Space below the button */
+}
+
+.back-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: scale(1.05); /* Scale effect on hover */
+}
+.remove-all-btn:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .Cart-section {
+        padding: 0 10px;
+    }
+
+    .row-section {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .CartimgWrapper .imgWrapper {
+        width: 80px; /* Smaller size on mobile */
+        height: 80px; /* Smaller size on mobile */
+        margin-right: 10px; /* Reduced margin on mobile */
+    }
+
+    .summary-section {
+        max-width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .Table td {
+        padding: 10px;
+        flex-direction: column; /* Adjust table cell layout */
+        text-align: center; /* Center-align text in table cells */
+    }
+
+    .checkout-btn,
+    .remove-all-btn {
+        margin-top: 10px; /* Space between buttons */
+    }
+
+    .flex-buttons {
+        display: flex;
+        flex-direction: column; /* Stack buttons vertically */
+    }
+
+    .CartimgWrapper h1, h2, h3, h4, h5, h6, p {
+        font-size: 0.8rem !important; /* Adjust font size for mobile */
+    }
+
+    .remove-btn {
+        display: block; /* Show the original remove button on mobile */
+        margin: 10px auto; /* Center align the button */
+        color: white; /* Text color */
+        padding: 8px 12px; /* Padding for the button */
+        border-radius: 5px; /* Rounded corners */
+        font-weight: 600; /* Font weight */
+        font-size: 1rem; /* Font size */
+        transition: background-color 0.3s ease, transform 0.3s ease; /* Transition for hover effect */
+    }
+    
+    .remove-btn:hover {
+        background-color: #c0392b; /* Darker red on hover */
+        transform: scale(1.05); /* Scale effect on hover */
+    }
+
+    .delete-icon {
+        display: none; /* Hide the delete icon on mobile */
+    }
+    
+    .Description p {
+        display: none; /* Keep the description hidden */
+    }
+    .Shopping-Cart{
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+
+    } 
+}
